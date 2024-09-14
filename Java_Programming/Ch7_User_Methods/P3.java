@@ -16,12 +16,57 @@ b. Write the definition of method two as follows:
 c. Write a Java program that tests parts a and b. (Declare additional variables in the method main, if necessary.)
 
 */
+import java.util.Scanner;
+public class Ch7_PrExercise3
+{
+public static void main(String[] args)
+{
+int num, num2;
+double dec;
 
-public class Main {
-    public static void main(String[] args){
+Scanner console = new Scanner(System.in);
+System.out.print("Input first integer number: ")
+num = console.nextInt();
+System.out.print("Input second integer number: ")
+num2 = console.nextInt();
+System.out.print("Input a double number: ")
+dec = console.nextDouble();
 
-        
+// Call method one and store the result
+int resultOne = one(num1, num2);
+System.out.println("Result of method one: " + resultOne);
 
-    }
-    
-    }
+// Call method two and print the result
+double resultTwo = two(dec, num1);
+System.out.println("Result of method two: " + resultTwo);
+
+console.close();
+
+}
+public static int one(int x, int y)
+{
+if(x > y){
+    return x + y;
+}
+else{
+    return x - 2 * y;
+}
+}
+public static double two(int x, double a)
+{
+int first;
+double z;
+Scanner console = new Scanner(System.in);
+z = console.nextDouble();
+z +=a;
+first = one(6,8);
+first += x;
+
+if(z > 2*first){
+    return z;
+}else {
+    return 2*first - z;
+}
+
+}
+}
