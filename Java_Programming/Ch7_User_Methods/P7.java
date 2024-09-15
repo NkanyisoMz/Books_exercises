@@ -19,12 +19,37 @@ the following methods:
     of the circle and returns the circle’s area. (If r is the radius, the area is 2*pi*r.)
     e. Assume that pi = 3.1416.
 */
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
+        Scanner console = new Scanner(System.in);
+        System.out.print("Enter the two centre coordinates separated by space: ");
+        x1 = console.nextInt();
+        y1 = console.nextInt();
+
+        System.out.print("Enter the point two coordinates separated by space: ");
+        x2 = console.nextInt();
+        y2 = console.nextInt();
+
         
 
+    }
+
+    public static double radius(){
+
+    }
+
+    public static double distance(){
+        
+    }
+
+    public static double circumference(){
+        
+    }
+
+    public static double area(){
+        
     }
     
     }
