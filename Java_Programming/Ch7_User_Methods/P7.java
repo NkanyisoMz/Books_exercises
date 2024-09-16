@@ -16,7 +16,7 @@ the following methods:
     represents the radius of the circle and returns the circle’s circumference.
     (If r is the radius, the circumference is 2pr.)
     d. area: This method takes as its parameter a number that represents the radius
-    of the circle and returns the circle’s area. (If r is the radius, the area is 2*pi*r.)
+    of the circle and returns the circle’s area. (If r is the radius, the area is 2*pi*r^2.)
     e. Assume that pi = 3.1416.
 */
 import java.util.Scanner;
@@ -32,24 +32,38 @@ public class Main {
         x2 = console.nextInt();
         y2 = console.nextInt();
 
+        Circle circle = new Circle();
+        double dis = circle.distance(x1,y1,x2,y2);
+        System.out.println(dis);
+        double rad = circle.radius(x1,y1,x2,y2);
+        System.out.println(rad);
+        double cir = circle.circumference(rad);
+        System.out.println(cir);
+        double area = circle.area(rad);
+        System.out.println(area);
+
         
 
-    }
-
-    public static double radius(){
-
-    }
-
-    public static double distance(){
-        
-    }
-
-    public static double circumference(){
-        
-    }
-
-    public static double area(){
-        
     }
     
     }
+
+import static java.lang.Math.*;
+
+public class Circle {
+    static double PI = 3.1416;
+   public static double distance(int x1, int y1, int x2, int y2){
+        return sqrt((x2-x1)^2 + (y2-y1)^2);
+    }
+    public static double radius(int a, int b, int c, int d){
+
+        return distance( a, b, c, d);
+
+    }
+    public static double circumference(double r){
+        return 2 * PI * r;
+    }
+    public static double area(double r){
+        return 2 * PI * pow(r,2);
+   }
+}
