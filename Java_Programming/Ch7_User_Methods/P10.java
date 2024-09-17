@@ -8,21 +8,28 @@ the number into a string.) Also write a program to test your method.
 */
 
 public class Main {
-    public static void main(String[] args){
-
-        System.out.println(Pal("lol"));
-
+    public static void main(String[] args) {
+        
+        System.out.println(isPalindrome(121));      
+        System.out.println(isPalindrome(3443));     
+        System.out.println(isPalindrome(123454321)); 
+        System.out.println(isPalindrome(123));      
     }
 
-     public static boolean Pal(String str){
-        int i,j;
-        j= str.length()-1;
-        for(i=0;i < (str.length()-1/2);i++){
-            if(str.charAt(i)!= str.charAt(j))
-                return false;
-            j--;
+    public static boolean isPalindrome(int number) {
+        if (number < 0) {
+            return false; 
         }
-        return true;
+        
+        int original = number;
+        int reversed = 0;
+        
+        while (number > 0) {
+            int digit = number % 10;
+            reversed = reversed * 10 + digit;
+            number = number / 10;
+        }
+        
+        return original == reversed;
     }
-    
-    }
+}

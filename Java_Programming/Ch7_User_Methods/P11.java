@@ -4,7 +4,7 @@ determines whether a positive integer is a prime number. Redo this programming e
 writing a method that takes as input a positive integer and returns true if the number is a prime number; 
 otherwise, it returns false.
 */
-
+import static java.lang.Math.sqrt;
 public class Main {
     public static void main(String[] args){
 
@@ -18,17 +18,26 @@ public class Main {
 
     }
 
-    public  static boolean prime(int num){
-
-        int square = (int) sqrt(num);
-        for(int i = 1;i <= square; i ++ )
-            for (int j = 1; j <= square; j++)
-                if((i * j) == num)
-                    return false;
-
-        return true;
-
-
+   public static boolean isPrime(int num) {
+    if (num <= 1) {
+        return false; 
     }
+    if (num == 2) {
+        return true; 
+    }
+    if (num % 2 == 0) {
+        return false; 
+    }
+
+    int squareRoot = (int) Math.sqrt(num);
+    for (int i = 3; i <= squareRoot; i += 2) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
     
     }
