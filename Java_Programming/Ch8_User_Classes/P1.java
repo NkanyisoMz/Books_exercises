@@ -7,14 +7,17 @@
 public class Main {
     public static void main(String[] args){
 
-        Roman roman1 = new Roman("MCXIV");
-        roman1.print(); 
+        Clock myClock = new Clock(0, 0, 0);
+        System.out.println(myClock);
 
-        Roman roman2 = new Roman("CCCLIX");
-        roman2.print(); 
+        myClock.decrementHours;
+        System.out.println(myClock);
+        
+        myClock.decrementMinutes;
+        System.out.println(myClock);
 
-        Roman roman3 = new Roman("MDCLXVI");
-        roman3.print(); 
+        myClock.decrementSeconds
+        System.out.println(myClock);
 
     }}
 
