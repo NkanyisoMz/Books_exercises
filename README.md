@@ -7,5 +7,5 @@ program to test your method.
 Some problems had visualization to outline or simplify the problem, those are marked
 with # in the commented problem statement 
 
-In Big Java its practice prictice exercirses and in Java Programming its programming
+In Big Java its practice exercirses and in Java Programming its programming
 exercises

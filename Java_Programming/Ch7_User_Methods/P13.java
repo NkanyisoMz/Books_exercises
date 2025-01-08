@@ -15,7 +15,24 @@ public class Main {
     public static void main(String[] args){
 
         
-
+double [] numbers = {1,2,3,4,5,6};
+        System.out.println("Mean: " + mean(numbers));
+        System.out.println(("Standard deviation: " + stdDev(numbers)));
     }
-    
+    public static double mean(double... numbers){
+        double sum = 0;
+        for(double num : numbers){
+            sum +=sum;
+        }
+        return sum/numbers.length;
     }
+    public static double stdDev(double... numbers){
+        double meanValue= mean(numbers);
+        double sumOfSquares = 0;
+        for (double num : numbers) {
+            double deviation = num - meanValue;
+            sumOfSquares += deviation * deviation;
+        }
+        return Math.sqrt(sumOfSquares/numbers.length);
+        }
+}
